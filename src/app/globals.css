@@ -2,26 +2,43 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  @apply bg-[#06141B] text-[#CCD0CF];
+}
+
+option {
+  background-color: #fff; /* Color de fondo de las opciones */
+  color: #333; /* Color del texto en las opciones */
+}
+
+.button-13:hover {
+  @apply bg-[#13212d];
+}
+
+.button-4 {
+  appearance: none;
+  @apply bg-[#0e1922];
+  border: 1px solid rgba(27, 31, 35, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, 0.04) 0 0 0 2px,
+    rgba(255, 255, 255, 0.25) 0 0 0 2px inset;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+  word-wrap: break-word;
+}
+
+.button-4:hover {
+  @apply bg-[#13212d];
+  text-decoration: none;
+  transition-duration: 0.1s;
 }
